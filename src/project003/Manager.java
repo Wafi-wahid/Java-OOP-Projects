@@ -1,4 +1,4 @@
-package project002;
+package project003;
 
 public class Manager extends Employee {
     private String department; // Department of the manager

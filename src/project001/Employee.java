@@ -6,6 +6,7 @@ public class Employee {
     private String email;
     private double salary;
 
+    // Constructor to initialize an Employee object with given properties
     public Employee(String firstName, String lastName, String email, double salary) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -13,9 +14,11 @@ public class Employee {
         this.salary = salary;
     }
 
+    // Default constructor
     public Employee() {
     }
 
+    // Getter and setter methods for firstName
     public String getFirstName() {
         return firstName;
     }
@@ -24,6 +27,7 @@ public class Employee {
         this.firstName = firstName;
     }
 
+    // Getter and setter methods for lastName
     public String getLastName() {
         return lastName;
     }
@@ -32,6 +36,7 @@ public class Employee {
         this.lastName = lastName;
     }
 
+    // Getter and setter methods for email
     public String getEmail() {
         return email;
     }
@@ -40,6 +45,7 @@ public class Employee {
         this.email = email;
     }
 
+    // Getter and setter methods for salary
     public double getSalary() {
         return salary;
     }
@@ -48,6 +54,7 @@ public class Employee {
         this.salary = salary;
     }
 
+    // Override the toString method to customize the output format
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -55,16 +62,19 @@ public class Employee {
         sb.append("|                                     |\n");
         sb.append("|  Employee Information:              |\n");
         sb.append("|  Name: ").append(firstName).append(" ").append(lastName);
+        // Adjust spaces to align the name properly
         for (int i = 0; i < 36 - (firstName.length() + lastName.length()); i++) {
             sb.append(" ");
         }
         sb.append("|\n");
         sb.append("|  Email: ").append(email);
+        // Adjust spaces to align the email properly
         for (int i = 0; i < 35 - email.length(); i++) {
             sb.append(" ");
         }
         sb.append("|\n");
         sb.append("|  Salary: $").append(String.format("%.2f", salary));
+        // Adjust spaces to align the salary properly
         for (int i = 0; i < 34 - String.format("%.2f", salary).length(); i++) {
             sb.append(" ");
         }
@@ -72,7 +82,4 @@ public class Employee {
         sb.append("|_____________________________________|\n");
         return sb.toString();
     }
-
-
 }
-
